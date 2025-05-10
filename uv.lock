@@ -2,6 +2,22 @@ version = 1
 revision = 2
 requires-python = ">=3.13"
 
+[manifest]
+members = [
+    "basic",
+    "try-python",
+]
+
+[[package]]
+name = "basic"
+version = "0.1.0"
+source = { virtual = "packages/baisc" }
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = []
+
 [[package]]
 name = "nodeenv"
 version = "1.9.1"
