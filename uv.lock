@@ -6,6 +6,7 @@ requires-python = ">=3.13"
 members = [
     "basic",
     "try-python",
+    "typing",
 ]
 
 [[package]]
@@ -131,6 +132,11 @@ dev = [
     { name = "pytest", specifier = ">=8.3.5" },
     { name = "ruff", specifier = ">=0.8.4" },
 ]
+
+[[package]]
+name = "typing"
+version = "0.1.0"
+source = { virtual = "packages/typing" }
 
 [[package]]
 name = "typing-extensions"
