@@ -1,13 +1,14 @@
 from src.protocol import foo
 
-class MockBar():
-    def __init__(self) -> None:
-        ...
+
+class MockBar:
+    def __init__(self) -> None: ...
 
     def baz(self) -> None:
         print("MockBar.baz called")
 
-class InvalidMockBar():
+
+class InvalidMockBar:
     def piyo(self) -> None:
         print("InvalidMockBar.piyo called")
 
@@ -17,4 +18,3 @@ def test_foo():
     foo(mock_bar)
     _invalid__mock_bar = InvalidMockBar()
     # foo(invalid__mock_bar)
-
