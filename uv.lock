@@ -5,6 +5,8 @@ requires-python = ">=3.13"
 [manifest]
 members = [
     "basic",
+    "callee",
+    "caller",
     "try-python",
     "typing",
 ]
@@ -13,6 +15,22 @@ members = [
 name = "basic"
 version = "0.1.0"
 source = { virtual = "packages/baisc" }
+
+[[package]]
+name = "callee"
+version = "0.1.0"
+source = { editable = "packages/callee" }
+
+[[package]]
+name = "caller"
+version = "0.1.0"
+source = { editable = "packages/caller" }
+dependencies = [
+    { name = "callee" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "callee", editable = "packages/callee" }]
 
 [[package]]
 name = "colorama"

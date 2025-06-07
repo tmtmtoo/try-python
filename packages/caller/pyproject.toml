@@ -1,0 +1,18 @@
+[project]
+name = "caller"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "matsu", email = "tmtmt2209@gmail.com" }]
+requires-python = ">=3.13"
+dependencies = ["callee>=0.1.0"]
+
+[project.scripts]
+caller = "caller:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+callee = { workspace = true }

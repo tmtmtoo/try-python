@@ -20,7 +20,7 @@
           ];
           shellHook = ''
             uv venv
-            uv sync
+            uv sync --all-packages
             source .venv/bin/activate
           '';
         };
